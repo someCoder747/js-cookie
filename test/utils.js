@@ -3,20 +3,17 @@
 
 	window.lifecycle = {
 		afterEach: function () {
+			var cookie;
 			// Remove the cookies created using js-cookie default attributes
-			// Note: Using `Object.keys(Cookies.get()).forEach(Cookies.remove)`
-			// would cause IE 6 + 7 to break with a "Object doesn't support
-			// this property or method" error, thus wrapping it with a
-			// function.
-			Object.keys(Cookies.get()).forEach(function (cookie) {
+			for (cookie in Cookies.get()) {
 				Cookies.remove(cookie);
-			});
+			}
 			// Remove the cookies created using browser default attributes
-			Object.keys(Cookies.get()).forEach(function (cookie) {
+			for (cookie in Cookies.get()) {
 				Cookies.remove(cookie, {
 					path: ''
 				});
-			});
+			}
 		}
 	};
 

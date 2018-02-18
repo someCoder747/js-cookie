@@ -3,7 +3,8 @@
     "test_path": [
         "test/index.html",
         "test/amd.html",
-        "test/environment-with-amd-and-umd.html"
+        "test/environment-with-amd-and-umd.html",
+        "test/encoding.html?integration_baseurl=http://127.0.0.1:9998/"
     ],
     "exit_with_fail": true,
     "browsers": [
